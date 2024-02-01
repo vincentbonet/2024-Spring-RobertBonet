@@ -1,2 +1,1 @@
-# Bonetr-WSP2024Spring
-## The best class at New Paltz
+# Repo for WSP 2024 Spring
