@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../pages/AboutView.vue'
-import "./src/router/index.ts"
-import "./src/main.css"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
