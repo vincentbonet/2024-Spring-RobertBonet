@@ -5,7 +5,6 @@ defineComponent({
   name: 'HomeView',
 });
 </script>
-
 <template>
   <main class="bg-gray-100">
     <div class="bg-white">
