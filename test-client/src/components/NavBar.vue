@@ -16,7 +16,6 @@ let isActive = false;
     <nav>
       <RouterLink to="/">Home</RouterLink>
     </nav>
-    <RouterLink to="/">Home</RouterLink>
 </template>
 
 <style scoped>
