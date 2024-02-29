@@ -11,14 +11,12 @@ let isActive = false;
       <div>
         <RouterLink to="/" class="text-white font-bold text-lg">Home</RouterLink>
       </div>
-      <!-- Add more navigation buttons here -->
     </nav>
   </template>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <!-- Add more navigation buttons here -->
     </nav>
-    <RouterLink to="/">Home</RouterLink> -->
+    <RouterLink to="/">Home</RouterLink>
 </template>
 
 <style scoped>
