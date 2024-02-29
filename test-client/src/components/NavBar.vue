@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
 
-let isActive = false;
-
+let isActive = ref(false);
+function toggleMenu() {
+  isActive.value = !isActive.value;
+}
 </script>
 
 <template>
