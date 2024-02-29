@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+import 'tailwindcss';
 export default {
-  content: ["C:/Users/robon/OneDrive/Documents/GitHub/2024-Spring-RobertBonet/test-client/src/assets/main.css"],
+  content: ['test-client/index.html', 'test-client/src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {},
   },
