@@ -10,6 +10,15 @@
     }
     const cart = ref([] as CartItem[])
 
+    function addToCart(product: Product) {
+        const item = cart.value.find(item => item.product.id === product.id)
+        if(item){
+            item.quantity++
+        } else {
+            cart.value.push({product, quantity: 1})
+        }
+    }
+
     products.value = getProducts() 
 
 </script>
@@ -76,7 +85,7 @@
     transform: translateX(0);
 }
 .cart li{
-    display: flex:
+    display: flex;
     align-items: center;
     margin: 1rem 0;
 }
