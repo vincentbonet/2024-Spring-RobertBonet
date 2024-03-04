@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "unplugin-vue-router": "^0.8.4",
     "vue": "^3.4.20",
     "vue-router": "^4.2.5"
   },
