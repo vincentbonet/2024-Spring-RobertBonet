@@ -2,7 +2,7 @@
 import type { Product } from "@/model/products";
 
 
-const props = defineProps()<{
+const props = defineProps<{
     product:Product
 }>()
 
