@@ -21,4 +21,4 @@ const cart = ref([] as CartItem[])
         }
     }
 
-    const total = computed( () => cart.value.reduce((total, item) => total + item.product.price * item.quantity, 0) )
+    export const total = computed( () => cart.value.reduce((total, item) => total + item.product.price * item.quantity, 0) )
