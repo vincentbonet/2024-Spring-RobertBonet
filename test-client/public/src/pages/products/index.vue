@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { ref,} from 'vue' //ref creates an observable object
     import { type Product, getProducts } from "@/model/products"; // 'type' means any type in a typescript file
+    import ProductCard from '@/components/ProductCard.vue';
     
     const products = ref([] as Product[]) //creates an observable array
 
@@ -22,21 +23,14 @@
         }
     }
 
+    const total =() => cart.value.reduce((total, item) => total + item.product.price * item.quantity, 0)
+
 </script>
 
 <template>
-    <div class="product-list">
-        <div class="grid grid-cols-3 gap-4">
-            <div v-for="product in products" :key="product.id" class="p-4 bg-white shadow">
-                <div class="content">
-                    <h3>{{ product.title }}</h3>
-                    <p>{{ product.description }}</p>
-                    <p>${{ product.price }}</p>
-                    <button @click="addToCart(product)">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div> 
+    <div class = "product-list">
+        <ProductCard v-for="product in products" :key="product.id" :product="product"></ProductCard>
+    </div>
     <div class = "flyout">
         <h2>Cart</h2>
         <div v-for="item in cart" :key="item.product.id">
@@ -45,7 +39,7 @@
             <p>{{ item.quantity }}</p>
             <p class="price">${{ item.product.price * item.quantity }}</p>
         </div>
-        {{ cart.length  }} items totalling ${{ cart.reduce((acc, item) => acc + item.product.price * item.quantity, 0) }}
+        {{ cart.length  }} items totalling ${{  total() }}
     </div>
 </template>
 
