@@ -13,8 +13,8 @@ function toggleMenu() {
 <template>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://tailwindcss.com">
-      <img src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.128b6e12eb85d013bc9f8bb74d7da990.svg" width="112" height="28">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
     </a>
 
     <a role="button" @click="toggleMenu" :class="{ 'is-active': isActive } " class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -32,6 +32,10 @@ function toggleMenu() {
 
       <RouterLink to="/documentation" class="navbar-item">
         Documentation
+      </RouterLink>
+
+      <RouterLink to="/products" class="navbar-item">
+        Products
       </RouterLink>
 
       <div class="navbar-item has-dropdown is-hoverable">
@@ -60,10 +64,10 @@ function toggleMenu() {
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button bg-blue-500 text-white">
+          <a class="button is-primary">
             <strong>Sign up</strong>
           </a>
-          <a class="button bg-gray-300 text-gray-700">
+          <a class="button is-light">
             Log in
           </a>
         </div>
@@ -78,5 +82,4 @@ function toggleMenu() {
     .router-link-active {
         border-bottom: 2px solid #00d1b2;
     }
-
 </style>

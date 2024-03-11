@@ -15,9 +15,5 @@ export interface Product {
 }
 
 export function getProducts(): Product[] {
-    return products.items; 
+    return products.items;
 }
-
-// typescript knows that the products.items 
-// is an array of Product objects, which is why it 
-// gave an error

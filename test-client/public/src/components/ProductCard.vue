@@ -1,18 +1,26 @@
 <script setup lang = "ts" >
+import type { Product } from "@/model/products";
+
+
 const props = defineProps()<{
     product:Product
 }>()
+
+const emit = defineEmits<{
+    addToCart: [product: Product]
+}>()
+
 </script>
 
 <template>
-    <div class = "card-image">
-        <img :src="product.thumbnail" alt="product.title"/>
+    <div class="card-image">
+        <img :src="product.thumbnail" alt="product.title" />
     </div>
-    <div class = "card-content">
-        <p class = "price">${{ product.price }}</p>
+    <div class="card-content">
+        <p class="price">${{ product.price }}</p>
         <h3>{{ product.title }}</h3>
         <i>{{ product.brand }}</i>
         <p>{{ product.description }}</p>
-        <button>@click="addToCart(product)">Add to Cart</button>
+        <button @click="addToCart(product)">Add to Cart</button>
     </div>
 </template>

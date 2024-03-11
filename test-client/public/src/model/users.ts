@@ -1,11 +1,6 @@
-export interface Root {
-    users: User[]
-    total: number
-    skip: number
-    limit: number
-  }
-  
-  export interface User {
+import data from "../data/users.json";
+
+export interface User {
     id: number
     firstName: string
     lastName: string
@@ -18,18 +13,18 @@ export interface Root {
     image: string
     address: Address
   }
-  
-  export interface Hair {
-    color: string
-    type: string
-  }
-
+ 
   export interface Address {
     address: string
     city: string
+    coordinates: {
+        lat: number
+        lng: number
+    }
     postalCode: string
     state: string
   }
   
-
-  
+    export function getUsers(): User[] {
+        return data.items;
+    }
